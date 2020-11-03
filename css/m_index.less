@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  a{
+    text-decoration: none;
+  }
+  @total-width:750; 
+  @radius:10/40rem;
+  .w{
+      width: 695/40rem;
+      margin: 0 auto;
+  }  
+  html{
+    font-size: 100vw/@total-width*40;
+    background-color: #e8eaee;
+  }
+.top-bar:extend(.w){
+    display: flex;
+    height: 130/40rem;
+    line-height: 175/40rem;
+    justify-content: space-between;
+    align-items: center;
+    a{
+      color:#24253d;
+      font-size: 40/40rem;
+      i{
+        color:#999;
+        font: size 16/40rem;        
+      }
+    }
+}
+.banner:extend(.w){
+  img{
+    width: 100%;
+    border-radius:   @radius;
+  }
+}
+.menu:extend(.w){
+  height: 230/40rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  margin-top: 10/40rem;
+  a{
+    width: 327/40rem;
+    height: 104/40rem;
+    line-height: 104/40rem;
+    color:white;
+    border-radius:   @radius;
+    // text-align: center;
+    i{
+      margin: 0 20/40rem 0 38/40rem;
+    }
+    
+  }
+}
+.menu1{
+  background-color: #f97053;
+}
+.menu2{
+  background-color: #cd6efe;
+}
+.menu3{
+  background-color: #fe4479;
+}
+.menu4{
+  background-color: #1a1b1b;
+}
+.course-list:extend(.w){
+  .title{  
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin-top: 20/40rem;
+  }
+  h2{
+    font-size: 30/40rem;
+    color: #24253d;
+    border-left: 2/40rem solid #3a84ff;
+    padding-left: 4/40rem;    
+  }
+  a{
+    font-size: 30/40rem;
+    color:#656565
+  }
+
+.item-list{
+  display: flex;
+  // margin-right:24/40rem;
+  // background-color: blueviolet;
+  justify-content:space-between;
+  flex-wrap: wrap;
+}
+.item{
+  margin-top: 15/40rem;
+  flex-grow: 0;
+  width: 280/40rem;
+  height: 240/40rem;
+  padding: 0 22/40rem;
+  background-color: white;
+  box-shadow: 0 0 10 rgb(0,0,3);
+  border-radius:  @radius;
+  display: flex;
+  flex-flow: column;
+  align-content:space-between;
+  img{
+    width: 100%;
+    margin-top: 20/40rem;
+    border-radius: @radius;
+    // margin:0 auto;
+  }
+  .course-title{
+    font-size: 16/40rem;
+    color:#24253d;    
+  }
+  .user-info{
+    display: flex;
+    align-items: center;
+  }
+  .avatar{
+    margin-top: -5/40rem;
+    width: 42/40rem;
+    height: 42/40rem;
+  }
+  .nickname{
+    margin-left:3/40rem;
+    font-size: 14/40rem;
+    color: #969393;
+    // background-color: blue;
+    margin-top: 13/40rem;
+    margin-left: 8/40rem;
+  }
+}
+}
