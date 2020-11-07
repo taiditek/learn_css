@@ -10,30 +10,27 @@
   .w{
       width: 690/40rem;
       margin: 0 auto;
-    //   text-align: center;
   } 
   .title_bar{
-    //   display: flex; 
       color:white;
       font-size: 50/40rem;
       height: 100/40rem;
       line-height: 100/40rem;
-      background-color: #999;
+      background-color: lightgrey;
       text-align: center;
       background-color: red;
       justify-content: space-around;
 }
 .box{
-    margin-top:10px;
     border-radius: 10px;
-    background-color:rgb(163, 163, 250);
-    width: 500/40rem;
-    justify-content: center;
+    background-color:lightgray;
+    // background-color:green;
+    width: 600/40rem;
+    height: 230px;
     margin: 0 auto;
-    height: 200px;
+    top: 100px;
     .box_title{
-        display:float;
-        color:blue;
+        color:white;
         text-align: center;
         font-size: 40/40rem;
         height: 50/40rem;
@@ -43,18 +40,11 @@
         width: 90%;
     }
     ul{
-        margin: 10px auto;
         list-style: none;
-        font-size: 10px;
+        font-size: 20px;
+        margin-top: 20px;
     }
-    button{
-        background-color:green;
-        font-size: 30/40rem;
-        color:white;
-        width: 50%;
-        height: 80/40rem;
-        border-radius:10px;
-    }
+   
 }
 .box_title{
     color:blueviolet;
@@ -66,10 +56,40 @@ form{
     align-content: center;
     text-align: center;
     font-size: small;
+    .my_button1{
+        background-color:green;
+        color:white;
+        width: 50%;
+        height: 80/40rem;
+        border-radius:10px;
+        border-style: none;
+   }
+    .my_button2{
+        position: relative;
+        background-color:green;
+        color:white;
+        width: 30%;
+        height: 80/40rem;
+        border-radius:10px;
+        border-style: none;
+    }
+    .my_button1:hover,.my_button2:hover {
+        background-color:red;
+    }
 }
 label{
     display: block;
     font-size: 10px;
     text-align: left;
     margin-left: 10px;
+}
+.item{
+    font: size 6px;
+    color:blue;
+}
+.singlesel{
+   float: left;
+}
+.multisel{
+    float: left;
 }
