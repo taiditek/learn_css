@@ -5,21 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/log_on.css">
-    <script src="js/log_on.js"></script>
+    <!-- <script src="js/log_on.js"></script> -->
 </head>
 <body>
     <h1 class="title_bar">JS初学者入门</h1>
     <div class="box">
         <div class="box_title">登录</div>
-        <form action="">
+        <form action="taget.html" class="myform">
             <label>用户名:</label>
-            <input type="text" name="usr_name" class="usr_name">
+            <input title="输入用户名" type="text" name="usr_name" value ="admin" class="usr_name">
             <label>密码:</label>
-            <input type="password" name="password" class="password">
+            <input type="password" name="password" value="123456" class="password">
+            <div class="singlesel">
+                <br>单选
+                <input type="radio" name='sel' value="1" checked>
+                <input type="radio" name='sel' value="2">
+            </div>
+            <div class="multisel">
+                <br>多选
+                <input type="checkbox" name='mycheck' value="abc">
+                <input type="checkbox" name="mycheck" value="def">
+            </div>
+            <select name="mysel" id="mysel">
+                <option value="1" >高一学生</option>
+                <option value="2" >高一学生</option>
+                <option  select value="3" >老师</option>
+            </select>
             <ul class="items">
-            </ul>
-            <button class="my_button">登 入</button>
-        </form>
+             </ul> 
+            <button class="submit1" type="submit" >提交</button>
+            <button class="reset1" type="reset" >重置</button>
+        </form>            
     </div>
 </body>
 </html>
+<script src="js/log_on.js"></script>
