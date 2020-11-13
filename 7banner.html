@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin-top: 0px;
+            padding: 0px;
+        }
+        .box{           
+            width: 1200px;
+            height: 450px;
+            background-color: aqua;
+            position: relative;
+            left: 200px;
+            overflow: hidden;
+            margin-top: 300px;
+            margin-left: 200px;
+            padding: 0;
+        }
+        .imglist{
+            /* margin: 0; */
+            width: 7320px; 
+            height: 800px;
+            position: absolute;
+            left:0px;
+        }
+        .imglist img{
+            float: left; 
+            list-style: none;
+           
+        }
+        li{
+           list-style: none;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function() {
+            var ban = document.getElementsByClassName("imglist");
+            var pos = 0;
+            var timer = setInterval(() => {
+                ban[0].style.left=-pos + "px";
+                pos++;
+                if(pos>7200){
+                    pos=0;
+                }
+            }, 10);
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        <ul class="imglist">
+            <li class=""><a href="#"><img src="banner/1.jpg" alt=""></a></li>
+            <li class=""><a href="#"><img src="banner/2.jpg" alt=""></a></li>
+            <li class=""><a href="#"><img src="banner/3.jpg" alt=""></a></li>
+            <li class=""><a href="#"><img src="banner/4.jpg" alt=""></a></li>
+            <li class=""><a href="#"><img src="banner/5.jpg" alt=""></a></li>
+            <li class=""><a href="#"><img src="banner/6.jpg" alt=""></a></li>
+        </ul>
+    </div>
+</body>
+</html>

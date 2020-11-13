@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        window.onload =  function(){
+            var cnt1 = document.getElementById("cnt");//byclass 不行为什么
+            cnt1.innerHTML = 2;
+            var cnt = 0;
+            var timer = setInterval(() => {
+                cnt1.innerHTML = cnt++;
+                if(cnt==10){
+                    clearInterval(timer);
+                }
+            }, 100);
+            
+        }
+    </script>
+</head>
+<body>
+    <div id="cnt">
+        1
+    </div>
+</body>
+</html>

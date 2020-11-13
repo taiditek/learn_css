@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        window.onload = function(){
+            // var num = 1;
+            // setInterval(() => {
+            //     var myimg = document.getElementById("myimg");
+            //     myimg.src = "img/" + num + ".jpg";
+            //     num++;
+            //     if(num>3){
+            //         num=1;
+            //     }
+            // }, 500);        
+        var timer;
+        var num = 1;
+        var start = document.getElementById("start");
+        start.onclick = function(){
+            console.log('hi..');
+            timer = setInterval(() => {
+                var myimg = document.getElementById("myimg");
+                myimg.src = "img/" + num + ".jpg";
+                num++;
+                if(num>3){
+                    num=1;
+                }
+            }, 500);
+        }
+        var stop = document.getElementById("stop");
+        stop.onclick = function(){
+            clearInterval(timer);
+        }
+        }
+    </script>
+</head>
+<body>
+    <img src="img/1.jpg" width = 300px alt="" id="myimg">
+    <br><br>
+    <button id="start">开始</button>
+    <button id="stop">停止</button>
+
+</body>
+</html>

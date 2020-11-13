@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        obj = {
+            name:"bills",
+            age:26,
+            commpay:"beijing"
+        }
+        document.write(obj.age);
+
+        function sub1(x){
+            // alert("hello world." + x);
+        }
+        sub1(234);
+        var sub2 = function(){
+            // alert("This sub2!");
+        }
+        sub2();
+        
+        (function(){
+            // alert("立即执行函数")
+        })();
+
+        // for(x in document){
+        //     document.write(document[x]);
+        //     document.write("<br>");
+        // }
+        var dt = new Date();
+        document.write(Date.now());
+        document.write("<br>");
+        document.write(dt);
+        document.write("<br>");
+        document.write(dt.getHours());
+    </script>
+</body>
+</html>

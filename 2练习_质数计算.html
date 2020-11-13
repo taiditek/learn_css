@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var num = prompt("请输入一个整数：");
+        var cnt=0;
+        var flag=true;
+        document.write("质数如下：2,");
+        for(var i=3 ; i<num ; i++){
+            flag=true;
+            for(var j=2;j<i;j++){                
+                if((i % j)==0){
+                    flag=false;
+                    break;                }
+            }
+            if(flag){
+                document.write(` ${i},`);
+                cnt++;
+            }
+        }
+        document.write(`<br>${num} 以下合计共有质数 ${cnt} 个。`)
+    </script>
+</body>
+</html>
