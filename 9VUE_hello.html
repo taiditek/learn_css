@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #list{
+            font-size: 10px;
+            height: 15px;
+            line-height: 15px;
+            margin: 1px;
+            /* padding: 15px; */
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="username">
+    <p>Helo {{username}} </p>
+    <p>{{username.toUpperCase()}}</p>
+    <img :src="imgurl" width="200px">
+    <br>
+    <button @click = "test">test</button>
+    <button @click = "test2('传递字符串过来了.')">test2</button>
+    <br>
+    <label>firstName lastName</label><br>
+    <input type="text" v-model="firstName">
+    <input type="text" v-model="lastName">
+    <p>全名：{{fullname}}</p>
+
+    <p id="list" v-for="count in 5">这是第{{count}}次循环</p>
+    <p >count:{{count}}</p>
+</div>
+
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+    const vm = new Vue({
+        el:'#app',
+        data:{
+            username:'Hello Vue!',
+            imgurl:'img/1.jpg',
+            firstName:'A',
+            lastName:'B',
+        },
+        methods:{
+            test(){
+                alert("测试成功！");
+            },
+            test2(msg){
+                alert(msg);
+            }
+        },
+        computed:{
+            fullname(){
+                return this.firstName + ' ' + this.lastName
+            }
+        },
+        watch:{
+            firstName:function(newVal,oldVal){
+
+            }
+        }
+    })
+</script>
+
+
+</body>
+</html>
