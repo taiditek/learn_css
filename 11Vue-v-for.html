@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <p>今天星期几？</p>
+    <hr>
+    <div class="app">
+        <ul>
+            <li v-for="(item,index) in arr">{{index}} : {{item}}</li>
+        </ul>
+        <hr>
+        <ul>
+            <li v-for="(item,key) in obj">{{key + " : " + item}}</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
+<script>
+    new Vue({
+        el:".app",
+        data:{
+            arr:["星期一","星期二","星期三","星期四","星期五","星期六","星期日"],
+            obj:{
+                name:"张世清",
+                age:26,
+                home:"南宫村"
+            }
+        }
+    })
+</script>

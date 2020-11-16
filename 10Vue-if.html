@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <style type="text/css">
+        .line{
+            background-color:rgb(209, 15, 199);
+            color: red;
+            height: 3px;
+            border: 1px rgb(236, 222, 28) solid;
+        }
+    </style>
+</head>
+<body>
+    <p>Vue if if-else-if if 联系</p>
+    <hr class="line">
+    <div id="app">
+        请输入星期：<input type="text" v-model="day" value="3">
+    <div v-if = "day==1">今天是周1</div>
+    <div v-else-if = "day==2">今天是周2</div>
+    <div v-else-if = "day==3">今天是周3</div>
+    <div v-else-if = "day==4">今天是周4</div>
+    <div v-else-if = "day==5">今天是周5</div>
+    <div v-else-if = "day==6">今天是周6</div>
+    <div v-else-if = "day==7">今天是周7</div>
+    <div v-else>输入错误！</div>
+<hr>
+    隐藏/显示<input type="checkbox" v-model="show">
+    <div v-show = "show">隐藏一个标签</div>
+<hr>
+<template v-if = "day==1">今天是周1</template>
+<template v-else-if = "day==2">今天是周2</template>
+<template v-else-if = "day==3">今天是周3</template>
+<template v-else-if = "day==4">今天是周4</template>
+<template v-else-if = "day==5">今天是周5</template>
+<template v-else-if = "day==6">今天是周6</template>
+<template v-else-if = "day==7">今天是周7</template>
+<template v-else>输入错误！</template>
+    
+</div>
+</body>
+<script>
+new Vue({
+    el:"#app",
+    data:{
+        day:3,
+        show:true
+    }
+})
+
+</script>
+</html>

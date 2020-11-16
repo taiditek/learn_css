@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="js/Vue.js"></script>
+    <script type="text/javascript" src="js/axios.min.js"></script>
+    <style>
+        *{margin:0;padding:0;list-style:none}
+        body{
+            background-color: #f4fvf4;
+        }
+        li{width:200px;border:1px solid #efefef;padding:5px;margin:10px;overflow: hidden;
+        background-color: #fff;
+        }
+        li img{width:100%;}
+        li h3{font-size: 14px;font-weight:400;white-space:nowrap;}
+        li{
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <p>Axios调用联系</p>
+        <hr>
+        <button @click="clickBtn">获取列表</button>
+        <ul>
+            <li v-for="item in list">
+                <img :src="item.picurl">
+                <h3>{{item.title}}</h3>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            list:{},
+
+        },
+        methods:{
+            clickBtn(){
+                axios.get("http://ku.qingnian8.com/dataApi/qingKu/getList.php").then((res)=>{
+                    console.log(res);
+                    this.list=res.data;
+                })
+
+            }
+
+        }
+    })
+</script>

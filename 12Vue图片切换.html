@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <style type="text/css">
+        .updown{
+            position:relative;
+            width: 400px;
+            text-align: center;
+            /* background-color: blue; */
+            transform:50%;
+        } 
+        .updown .left{
+            left:0;
+        }
+        .updown .right{
+            right:0;
+        }
+        .left .right{
+            position:absolute;
+            padding: 0;
+            top:50px;
+            /* float: left; */
+            /* top:500px; */
+        }
+    </style>
+</head>
+<body>
+    <p>绑定方法和事件的演示</p>
+    <hr>
+    <div id='banner'>        
+        <div class="updown">
+            <img :src="imgsrc" alt="" width="400px">
+        <button class="left" @click="previous">&lt</button>
+        <button class="right" @click="next" style="transform: 50%;">&gt</button>
+        </div>
+        <p>{{imgindex}}</p>
+    </div>
+</body>
+</html>
+<script>
+    new Vue({
+        el:"#banner",
+        data:{
+            imglist:["1.jpg.webp","2.jpg.webp","3.jpg.webp","4.jpg.webp","5.jpg.webp"],
+            imgindex:3,
+            imgsrc:"img/2.jpg.webp"
+        },
+        methods:{
+            next:function(){
+                this.imgindex++;
+                if(this.imgindex>=5){
+                    this.imgindex=0;
+                }
+                this.imgsrc="img/" + this.imglist[this.imgindex];
+            },
+            previous:function(){
+                this.imgindex--;
+                if(this.imgindex<0){
+                    this.imgindex=4;
+                }
+                this.imgsrc="img/" + this.imglist[this.imgindex];
+            }
+        }  
+    })
+</script>
